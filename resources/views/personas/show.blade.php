@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Personas</title>
+    <title>Listado de Personas</title>
     <style>
         table {
             width: 100%;

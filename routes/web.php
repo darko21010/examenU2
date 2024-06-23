@@ -30,4 +30,8 @@ Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact
 
 use App\Http\Controllers\PersonaController;
 
-Route::get('/personas', [PersonaController::class, 'index'])->name('personas.index');
+Route::get('/personas', [PersonaController::class, 'index'])->name('personas.options');
+Route::get('/personas/show', [PersonaController::class, 'show'])->name('personas.show');
+Route::get('/personas/create', [PersonaController::class, 'create'])->name('personas.create');
+
+Route::post('/personas', [PersonaController::class, 'store'])->name('personas.store');
