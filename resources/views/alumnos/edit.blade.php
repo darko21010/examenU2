@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Editar Persona</title>
+    <title>Editar Alumno</title>
 </head>
 <body>
-    <h1>Editar Persona</h1>
+    <h1>Editar Alumno</h1>
     @include('menu')
 
     @if ($errors->any())
@@ -17,42 +17,27 @@
         </div>
     @endif
 
-    <form action="{{ route('personas.update', $persona->nPerCodigo) }}" method="POST">
+    <form action="{{ route('alumnos.update', $alumnos->nCodigo) }}" method="POST">
         @csrf
         @method('PATCH')
-        <label for="cPerApellido">Apellido:</label>
-        <input type="text" id="cPerApellido" name="cPerApellido" value="{{ old('cPerApellido', $persona->cPerApellido) }}" required>
+        <label for="Apellido">Apellido:</label>
+        <input type="text" id="Apellido" name="Apellido" value="{{ old('Apellido', $alumnos->Apellido) }}" required>
         <br><br>
         
-        <label for="cPerNombre">Nombre:</label>
-        <input type="text" id="cPerNombre" name="cPerNombre" value="{{ old('cPerNombre', $persona->cPerNombre) }}" required>
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" value="{{ old('Nombre', $alumnos->Nombre) }}" required>
         <br><br>
         
-        <label for="cPerDireccion">Dirección:</label>
-        <input type="text" id="cPerDireccion" name="cPerDireccion" value="{{ old('cPerDireccion', $persona->cPerDireccion) }}" required>
+        <label for="Curso">Curso:</label>
+        <input type="text" id="Curso" name="Curso" value="{{ old('Curso', $alumnos->Curso) }}" required>
         <br><br>
         
-        <label for="dPerFecNac">Fecha de Nacimiento:</label>
-        <input type="date" id="dPerFecNac" name="dPerFecNac" value="{{ old('dPerFecNac', $persona->dPerFecNac) }}" required>
+        <label for="Nota1">Nota1:</label>
+        <input type="number" id="Nota1" name="Nota1" value="{{ old('Nota1', $alumnos->Nota1) }}" required>
         <br><br>
         
-        <label for="nPerEdad">Edad:</label>
-        <input type="number" id="nPerEdad" name="nPerEdad" value="{{ old('nPerEdad', $persona->nPerEdad) }}" required>
-        <br><br>
-        
-        <label for="nPerSueldo">Sueldo:</label>
-        <input type="number" id="nPerSueldo" name="nPerSueldo" value="{{ old('nPerSueldo', $persona->nPerSueldo) }}" required>
-        <br><br>
-        
-        <label for="cPerRnd">Rnd:</label>
-        <input type="text" id="cPerRnd" name="cPerRnd" value="{{ old('cPerRnd', $persona->cPerRnd) }}" required>
-        <br><br>
-        
-        <label for="nPerEstado">Estado:</label>
-        <select id="nPerEstado" name="nPerEstado" required>
-            <option value="1" {{ old('nPerEstado', $persona->nPerEstado) == '1' ? 'selected' : '' }}>1</option>
-            <option value="0" {{ old('nPerEstado', $persona->nPerEstado) == '0' ? 'selected' : '' }}>0</option>
-        </select>
+        <label for="Nota2">Nota2:</label>
+        <input type="number" id="Nota2" name="Nota2" value="{{ old('Nota2', $alumnos->Nota2) }}" required>
         <br><br>
         
         <button type="submit">Actualizar</button>

@@ -14,28 +14,22 @@ class CreateAlumnoRequest extends FormRequest
     public function rules()
     {
         return [
-            'cPerApellido' => 'required|string|max:50',
-            'cPerNombre' => 'required|string|max:50',
-            'cPerDireccion' => 'required|string|max:100',
-            'dPerFecNac' => 'required|date',
-            'nPerEdad' => 'required|integer',
-            'nPerSueldo' => 'required|numeric',
-            'cPerRnd' => 'required|string|max:50',
-            'nPerEstado' => 'required|in:0,1'
+            'Apellido' => 'required|string|max:50',
+            'Nombre' => 'required|string|max:50',
+            'Curso' => 'required|string|max:100',
+            'Nota1' => 'required|numeric',
+            'Nota2' => 'required|numeric',
         ];
     }
 
     public function messages()
     {
         return [
-            'cPerApellido.required' => 'El apellido es obligatorio.',
-            'cPerNombre.required' => 'El nombre es obligatorio.',
-            'cPerDireccion.required' => 'La dirección es obligatoria.',
-            'dPerFecNac.required' => 'La fecha de nacimiento es obligatoria.',
-            'nPerEdad.required' => 'La edad es obligatoria.',
-            'nPerSueldo.required' => 'El sueldo es obligatorio.',
-            'cPerRnd.required' => 'El campo Rnd es obligatorio.',
-            'nPerEstado.required' => 'El estado es obligatorio.'
+            'Apellido.required' => 'El apellido es obligatorio.',
+            'Nombre.required' => 'El nombre es obligatorio.',
+            'Curso.required' => 'El curso es obligatorio.',
+            'Nota1.required' => 'La Nota 1 es obligatoria.',
+            'Nota2.required' => 'La Nota 2 es obligatoria.',
         ];
     }
 }

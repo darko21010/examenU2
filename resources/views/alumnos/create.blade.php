@@ -9,29 +9,29 @@
 
     <form action="{{ route('alumnos.store') }}" method="POST">
         @csrf
-        <label for="cPerApellido">Apellido:</label>
-        <input type="text" id="cPerApellido" name="cPerApellido" value="{{ old('cPerApellido') }}" >
-        {{ $errors->first('cPerApellido') }}
+        <label for="Apellido">Apellido:</label>
+        <input type="text" id="Apellido" name="Apellido" value="{{ old('Apellido') }}" >
+        {{ $errors->first('Apellido') }}
         <br><br>
         
-        <label for="cPerNombre">Nombre:</label>
-        <input type="text" id="cPerNombre" name="cPerNombre" value="{{ old('cPerNombre') }}" >
-        {{ $errors->first('cPerNombre') }}
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" value="{{ old('Nombre') }}" >
+        {{ $errors->first('Nombre') }}
         <br><br>
 
-        <label for="cPerNombre">Curso:</label>
-        <input type="text" id="cPerNombre" name="cPerNombre" value="{{ old('cPerNombre') }}" >
-        {{ $errors->first('cPerNombre') }}
+        <label for="Curso">Curso:</label>
+        <input type="text" id="Curso" name="Curso" value="{{ old('Curso') }}" >
+        {{ $errors->first('Curso') }}
         <br><br>
         
-        <label for="cPerDireccion">Nota1:</label>
-        <input type="text" id="cPerDireccion" name="cPerDireccion" value="{{ old('cPerDireccion') }}" >
-        {{ $errors->first('cPerDireccion') }}
+        <label for="Nota1">Nota1:</label>
+        <input type="text" id="Nota1" name="Nota1" value="{{ old('Nota1') }}" >
+        {{ $errors->first('Nota1') }}
         <br><br>
         
-        <label for="cPerDireccion">Nota2:</label>
-        <input type="text" id="cPerDireccion" name="cPerDireccion" value="{{ old('cPerDireccion') }}" >
-        {{ $errors->first('cPerDireccion') }}
+        <label for="Nota2">Nota2:</label>
+        <input type="text" id="Nota2" name="Nota2" value="{{ old('Nota2') }}" >
+        {{ $errors->first('Nota2') }}
         <br><br>
         <!--
         <label for="nPerEdad">Edad:</label>

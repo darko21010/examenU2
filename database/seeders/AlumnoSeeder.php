@@ -42,12 +42,13 @@ class AlumnoSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'Apellido' => 'Vargas',
-                'Nombre' => 'Baltodano',
+                'Apellido' => 'Jorge',
+                'Nombre' => 'Vargas',
                 'Curso' => 'Algebra',
                 'Nota1' => 11,
                 'Nota2' => 12,
                 'Promedio' => 11.5,
+                'Condicion' => 'Desaprobado',
                 //'FechaRegistro' => '1992-01-15'
                 'created_at' => now(),
                 'updated_at' => now(),
