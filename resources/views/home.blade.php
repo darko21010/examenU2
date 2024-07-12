@@ -4,7 +4,7 @@
     <title>Inicio</title>
 </head>
 <body>
-    <h1> Bienvenido a la página de inicio </h1>
+    <h1> Bienvenido a la página de inicio - EXAMEN U2 </h1>
     @include('menu')
 </body>
 </html>

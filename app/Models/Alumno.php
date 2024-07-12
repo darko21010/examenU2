@@ -5,28 +5,29 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Persona extends Model
+class Alumno extends Model
 {
     use HasFactory;
 
     // Definir la tabla asociada al modelo
-    protected $table = 'persona';
+    protected $alumno = 'alumno';
 
     // Definir los campos que pueden ser asignados masivamente
     protected $fillable = [
-        'cPerApellido',
-        'cPerNombre',
-        'cPerDireccion',
-        'dPerFecNac',
-        'nPerEdad',
-        'nPerSueldo',
-        'cPerRnd',
-        'nPerEstado',
-        'remember_token',
+        'Apellido',
+        'Nombre',
+        'Curso',
+        'Nota1',
+        'Nota2',
+        'Promedio',
+        'Condicion',
         'created_at',
         'updated_at',
     ];
 
     // Desactivar las marcas de tiempo si no se usan
     public $timestamps = true;
+
+    // Definir la clave primaria personalizada
+    protected $primaryKey = 'nCodigo';
 }

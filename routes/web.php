@@ -29,9 +29,25 @@ Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.sh
 Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
 
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\AlumnoController;
 
-Route::get('/personas', [PersonaController::class, 'index'])->name('personas.options');
-Route::get('/personas/show', [PersonaController::class, 'show'])->name('personas.show');
-Route::get('/personas/create', [PersonaController::class, 'create'])->name('personas.create');
+Route::get('/alumnos', [AlumnoController::class, 'showOptions'])->name('alumnos.options'); //MENU DE OPCIONES ALUMNOS
+Route::get('/alumnos/list', [AlumnoController::class, 'index'])->name('alumnos.index');//LISTADO DE ALUMNOS
+Route::get('/alumnos/create', [AlumnoController::class, 'create'])->name('alumnos.create');//AGREGAR ALUMNOS 
 
-Route::post('/personas', [PersonaController::class, 'store'])->name('personas.store');
+Route::post('/alumnos', [AlumnoController::class, 'store'])->name('alumnos.store'); // VA DE LA MANO PARA AGREGAR ALUMNOS
+
+//PARA EDITAR SEGUN EL ID
+Route::get('/alumnos/{nPerCodigo}/edit', [AlumnoController::class, 'edit'])->name('alumnos.edit');
+Route::patch('/alumnos/{nPerCodigo}', [AlumnoController::class, 'update'])->name('alumnos.update');
+
+Route::get('/alumnos/search', function () {
+    return view('alumnos.search');
+})->name('alumnos.search');
+Route::post('/alumnos/findForEdit', [AlumnoController::class, 'findForEdit'])->name('alumnos.findForEdit');
+
+Route::delete('/alumnos/{nPerCodigo}', [AlumnoController::class, 'destroy'])->name('alumnos.destroy');
+
+
+Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
